@@ -123,7 +123,9 @@ export default function Navbar() {
     >
       <div className="mx-auto flex h-[72px] w-full items-center justify-between gap-4 px-5 md:h-[88px] md:px-10 xl:h-[104px] xl:px-16">
         {/* Brand */}
-        <Brand />
+        <div className="origin-left scale-[0.8] md:scale-100 transition-transform">
+          <Brand />
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-2 lg:flex">
