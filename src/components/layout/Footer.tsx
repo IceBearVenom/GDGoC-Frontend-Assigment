@@ -47,7 +47,7 @@ export default function Footer() {
           <p className="text-[#000] font-googleSans text-base font-bold w-fit">
             Keep in the loop
           </p>
-          <a className="text-[#1967D2] font-googleSans text-lg w-fit cursor-pointer" href="https://www.instagram.com/gdgoc.ugm/">
+          <a className="text-[#1967D2] font-googleSans text-lg w-fit cursor-pointer" href="https://www.instagram.com/gdgoc.ugm/" target="_blank">
             @gdgoc.ugm
           </a>
           <div className="flex items-start gap-4 w-fit overflow-hidden">

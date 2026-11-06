@@ -7,6 +7,7 @@ import ProjectBrief from "./sections/ProjectBrief";
 import GetStarted from "./sections/GetStarted";
 import InclusiveBanner from "./sections/InclusiveBanner";
 import Faq from "./sections/Faq";
+import CommunityStats from "./sections/CommunityStats";
 
 export default function LandingGdgocUgm() {
   return (
@@ -16,6 +17,7 @@ export default function LandingGdgocUgm() {
         <ValueStrip />
       </div>
       <div className="flex flex-col items-start w-full overflow-hidden">
+        <CommunityStats />
         <About />
         <Tracks />
         <LearningFormats />

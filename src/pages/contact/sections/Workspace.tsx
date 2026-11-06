@@ -134,7 +134,7 @@ export default function Workspace() {
             Follow @gdgoc.ugm for learning opportunities and what’s happening in the community.
           </p>
           <div className="flex items-center gap-3 w-fit overflow-hidden">
-            <HyperLink caption="Find @gdgoc.ugm" href="https://www.instagram.com/gdgoc.ugm/" />
+            <HyperLink caption="Find @gdgoc.ugm" href="https://www.instagram.com/gdgoc.ugm/" newTab/>
           </div>
         </div>
       </div>
