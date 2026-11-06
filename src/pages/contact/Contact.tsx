@@ -1,9 +1,13 @@
-import React from 'react'
+import Introduction from "./Introduction";
+import Workspace from "./Workspace";
+import BeforeYouSend from "./BeforeYouSent";
 
-const Contact = () => {
+export default function Contact() {
   return (
-    <div>Contact</div>
-  )
+    <div className="flex flex-col items-start w-full overflow-hidden">
+      <Introduction />
+      <Workspace />
+      <BeforeYouSend />
+    </div>
+  );
 }
-
-export default Contact

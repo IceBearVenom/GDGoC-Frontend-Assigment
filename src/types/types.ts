@@ -30,8 +30,8 @@ export type TrackTypes = {
     icon: string;
     color: string;
     skills: string[];
-    whatYouDo: string;
-    exploreLink: string;
+    what_you_do: string;
+    explore_link: string;
     open: boolean;
 }
 

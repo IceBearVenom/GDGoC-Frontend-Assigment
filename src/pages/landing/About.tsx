@@ -11,7 +11,7 @@ export default function About() {
         <p className="text-[#242424] font-googleSans text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.12em] w-full">
           Not just learning tech. Finding your people.
         </p>
-        <HyperLink caption="More about GDGoC UGM" />
+        <HyperLink caption="More about GDGoC UGM" href="/about" />
       </div>
       <div className="flex flex-col items-start gap-6 w-full overflow-hidden">
         <p className="text-[#5F6368] font-googleSans text-lg md:text-[21px] font-bold leading-[1.55em] w-full">

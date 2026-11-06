@@ -3,10 +3,10 @@ import SectionLabel from "../../components/SectionLabel";
 
 export default function AboutIntroduction() {
   return (
-    <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-16 py-14 md:py-20 px-5 md:px-10 xl:px-24 w-full overflow-hidden">
+    <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-16 py-14 md:py-20 px-5 md:px-10 xl:px-[max(6rem,calc((100%_-_1344px)/2))] w-full overflow-hidden">
       <div className="flex flex-col items-start gap-[26px] w-full lg:flex-1 lg:min-w-0 lg:max-w-[720px] overflow-hidden">
         <SectionLabel children="ABOUT GDGOC UGM" />
-        <h1 className="text-[#1967D2] font-googleSans text-5xl md:text-6xl xl:text-7xl font-bold leading-[1.08em] w-full">
+        <h1 className="text-[#1967D2] font-googleSans text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-[1.08em] w-full">
           Built by students. For what’s next.
         </h1>
         <p className="text-[#5F6368] font-googleSans text-lg md:text-[22px] leading-[1.55em] w-full">

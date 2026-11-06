@@ -17,8 +17,8 @@ export default function Hero() {
           connect, and build technology that matters.
         </p>
         <div className="flex flex-wrap items-start gap-3 w-fit overflow-hidden">
-          <Button caption="Find your learning track" />
-          <Button caption="Get to know us" solid={false}/>
+          <Button caption="Find your learning track" href="/overview" />
+          <Button caption="Get to know us" solid={false} href="/about" />
         </div>
         <div className="flex items-center gap-2.5 w-fit overflow-hidden">
           <div className="flex items-start -space-x-[3px] w-fit overflow-hidden">

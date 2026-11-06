@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -11,13 +11,25 @@ import type { ApiResponse, NavigationTypes } from "../types/types";
 const cta =
   "h-[52px] items-center justify-center gap-4 rounded-lg bg-[#4284F4] px-6 font-googleSans text-base font-medium text-white transition-colors hover:bg-[#3B78E7]";
 
+// Ignore tiny scroll movements so the navbar doesn't flicker
+const SCROLL_THRESHOLD = 8;
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [links, setLinks] = useState<NavigationTypes[]>([]);
+  const [visible, setVisible] = useState(true);
+
+  const lastScrollY = useRef(0);
+  const menuOpenRef = useRef(menuOpen);
 
   const { pathname } = useLocation();
 
   const closeMenu = () => setMenuOpen(false);
+
+  // Keep a ref in sync so the scroll handler reads the latest value
+  useEffect(() => {
+    menuOpenRef.current = menuOpen;
+  }, [menuOpen]);
 
   useEffect(() => {
     const getNavigation = async () => {
@@ -38,6 +50,48 @@ export default function Navbar() {
   // Close mobile menu when route changes
   useEffect(() => {
     closeMenu();
+  }, [pathname]);
+
+  // Hide on scroll down, show on scroll up or at the top
+  useEffect(() => {
+    lastScrollY.current = window.scrollY;
+    let ticking = false;
+
+    const update = () => {
+      const currentY = window.scrollY;
+      const diff = currentY - lastScrollY.current;
+
+      if (currentY <= 0) {
+        // Always show at the very top
+        setVisible(true);
+      } else if (menuOpenRef.current) {
+        // Never hide while the mobile menu is open
+        setVisible(true);
+      } else if (Math.abs(diff) > SCROLL_THRESHOLD) {
+        setVisible(diff < 0); // scrolling up -> show, down -> hide
+      } else {
+        ticking = false;
+        return; // small movement: keep lastScrollY as is
+      }
+
+      lastScrollY.current = currentY;
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Show the navbar again when navigating to a new page
+  useEffect(() => {
+    setVisible(true);
   }, [pathname]);
 
   const renderLinks = () =>
@@ -62,9 +116,12 @@ export default function Navbar() {
     });
 
   return (
-    <header className="relative z-50 w-full border-b border-[#DADCE0] bg-white">
+    <header
+      className={`fixed top-0 left-0 z-50 w-full border-b border-[#DADCE0] bg-white transition-transform duration-300 ease-in-out ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="mx-auto flex h-[72px] w-full items-center justify-between gap-4 px-5 md:h-[88px] md:px-10 xl:h-[104px] xl:px-16">
-
         {/* Brand */}
         <Brand />
 
@@ -75,7 +132,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex">
-          <Button caption="Find your track" />
+          <Button caption="Find your track" href="/overview" />
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -106,6 +163,7 @@ export default function Navbar() {
           <Button
             cn={`flex w-full sm:w-auto ${cta}`}
             caption="Find your track"
+            href="/overview"
           />
         </div>
       </nav>

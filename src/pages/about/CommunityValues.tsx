@@ -20,7 +20,7 @@ export default function CommunityValues() {
   }, []);
 
   return (
-    <div className="flex flex-col items-start gap-10 py-14 md:py-[88px] px-5 md:px-10 xl:px-24 w-full overflow-hidden">
+    <div className="flex flex-col items-start gap-10 py-14 md:py-[88px] px-5 md:px-10 xl:px-[max(6rem,calc((100%_-_1344px)/2))] w-full overflow-hidden">
       <div className="flex flex-col items-start gap-[18px] w-full md:max-w-[800px] overflow-hidden">
         <SectionLabel children="WHAT GUIDES US" />
         <h2 className="text-[#242424] font-googleSans text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.12em] w-full">
@@ -31,7 +31,7 @@ export default function CommunityValues() {
         {values.map(({ id, title, description, icon, color }) => (
           <div
             key={id ?? title}
-            className="flex flex-col items-start gap-[22px] p-5 md:p-[26px] rounded-3xl border border-[#DADCE0] w-full overflow-hidden"
+            className="flex flex-col items-start gap-[22px] p-5 md:p-[26px] rounded-3xl border border-[#DADCE0] w-full min-w-0 break-words overflow-hidden"
           >
             <div className="rounded-sm w-9 h-1" style={{ backgroundColor: color }}></div>
             <p className="text-[24px]">{icon}</p>

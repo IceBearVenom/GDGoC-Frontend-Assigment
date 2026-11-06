@@ -19,8 +19,8 @@ export default function Cta() {
           </p>
         </div>
         <div className="flex flex-col items-start gap-4 w-full md:w-[260px] md:shrink-0 overflow-hidden">
-          <Button caption="Explore the overview" />
-          <HyperLink caption="Talk to the community" />
+          <Button caption="Explore the overview" href="/overview" />
+          <HyperLink caption="Talk to the community" href="" />
         </div>
       </div>
     </div>
