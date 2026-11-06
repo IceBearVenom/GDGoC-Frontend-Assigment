@@ -1,37 +1,17 @@
+import HyperLink from "../../components/HyperLink";
+import SectionLabel from "../../components/SectionLabel";
+
 export default function Faq() {
   return (
     <div className="flex flex-col lg:flex-row py-14 md:py-[88px] px-5 md:px-10 xl:px-24 items-start gap-10 lg:gap-12 xl:gap-24 w-full overflow-hidden">
       <div className="flex flex-col items-start gap-5 w-full lg:w-[340px] xl:w-[400px] lg:shrink-0 overflow-hidden">
         <div className="flex items-center gap-2.5 w-fit overflow-hidden">
-          <div className="w-[7px] h-[7px]"></div>
-          <p className="text-[#5F6368] font-googleSans text-xs font-medium w-fit">
-            A few good questions
-          </p>
+          <SectionLabel children="A FEW GOOD QUESTION" />
         </div>
         <p className="text-[#242424] font-googleSans text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.12em] w-full">
           Wondering where to begin?
         </p>
-        <div className="flex items-center gap-3 w-fit overflow-hidden">
-          <p className="text-[#1967D2] font-googleSans text-base font-medium w-fit">
-            Ask us a question
-          </p>
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 relative "
-          >
-            <path
-              d="M3.3335 10H16.566M16.566 10C16.566 10.32 16.4435 10.64 16.2002 10.8833L11.4585 15.625M16.566 10C16.566 9.68 16.4435 9.36 16.2002 9.11667L11.4585 4.375"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              stroke="#1967D2"
-            />
-          </svg>
-        </div>
+        <HyperLink caption="Ask us a question" />
       </div>
       <div className="flex flex-col items-start gap-6 w-full overflow-hidden">
         <div className="flex flex-col items-start gap-3.5 w-full overflow-hidden">

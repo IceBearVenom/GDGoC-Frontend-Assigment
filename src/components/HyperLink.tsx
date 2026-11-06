@@ -2,11 +2,13 @@ import React from 'react'
 
 type HyperLinkTypes = {
     caption: string;
+    href?: string;
 }
 
 const HyperLink = ({caption}: HyperLinkTypes) => {
   return (
-    <div className="flex items-center gap-3 w-fit overflow-hidden">
+    <div 
+    className="flex items-center gap-3 w-fit overflow-hidden cursor-pointer">
         <p className="text-[#1967D2] font-googleSans text-base font-medium w-fit">
             {caption}
         </p>

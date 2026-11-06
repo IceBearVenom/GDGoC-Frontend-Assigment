@@ -1,3 +1,6 @@
+import HyperLink from "../../components/HyperLink";
+import SectionLabel from "../../components/SectionLabel";
+
 export default function ProjectBrief() {
   return (
     <div className="flex flex-col lg:flex-row py-14 md:py-[88px] px-5 md:px-10 xl:px-24 items-stretch lg:items-center gap-10 lg:gap-16 w-full overflow-hidden">
@@ -46,10 +49,7 @@ export default function ProjectBrief() {
       </div>
       <div className="flex flex-col items-start gap-6 w-full overflow-hidden">
         <div className="flex items-center gap-2.5 w-fit overflow-hidden">
-          <div className="w-[7px] h-[7px]"></div>
-          <p className="text-[#5F6368] font-googleSans text-xs font-medium w-fit">
-            Build something that matters
-          </p>
+          <SectionLabel children="BUILD SOMETHING THAT MATTERS"/>
         </div>
         <p className="text-[#242424] font-googleSans text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.12em] w-full">
           Your next project could start on campus.
@@ -63,27 +63,7 @@ export default function ProjectBrief() {
           Bring research, design, and development together. Try an idea, get
           feedback, and make the next version better.
         </p>
-        <div className="flex items-center gap-3 w-fit overflow-hidden">
-          <p className="text-[#1967D2] font-googleSans text-base font-medium w-fit">
-            Explore project-based learning
-          </p>
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 relative "
-          >
-            <path
-              d="M3.3335 10H16.566M16.566 10C16.566 10.32 16.4435 10.64 16.2002 10.8833L11.4585 15.625M16.566 10C16.566 9.68 16.4435 9.36 16.2002 9.11667L11.4585 4.375"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              stroke="#1967D2"
-            />
-          </svg>
-        </div>
+        <HyperLink caption="Explore porject-based learning" />
       </div>
     </div>
   );

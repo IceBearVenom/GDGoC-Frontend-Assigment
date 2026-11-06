@@ -1,12 +1,11 @@
+import SectionLabel from "../../components/SectionLabel";
+
 export default function GetStarted() {
   return (
     <div className="flex pt-2 px-5 md:px-10 xl:px-24 pb-14 md:pb-[88px] flex-col items-start gap-10 w-full overflow-hidden">
       <div className="flex flex-col items-start gap-[18px] w-full md:max-w-[800px] overflow-hidden">
         <div className="flex items-center gap-2.5 w-fit overflow-hidden">
-          <div className="w-[7px] h-[7px]"></div>
-          <p className="text-[#5F6368] font-googleSans text-xs font-medium w-fit">
-            Make your first move
-          </p>
+          <SectionLabel children="MAKE YOUR FIRST MOVE" />
         </div>
         <p className="text-[#242424] font-googleSans text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.12em] w-full">
           You don’t need to have it all figured out.

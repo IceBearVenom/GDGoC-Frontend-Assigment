@@ -7,8 +7,6 @@ import ProjectBrief from "./ProjectBrief";
 import GetStarted from "./GetStarted";
 import InclusiveBanner from "./InclusiveBanner";
 import Faq from "./Faq";
-import Cta from "./Cta";
-import Footer from "./Footer";
 
 export default function LandingGdgocUgm() {
   return (
@@ -27,9 +25,8 @@ export default function LandingGdgocUgm() {
         <GetStarted />
         <InclusiveBanner />
         <Faq />
-        <Cta />
       </div>
-      <Footer />
+      
     </div>
   );
 }

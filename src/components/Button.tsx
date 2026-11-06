@@ -10,7 +10,7 @@ const Button = ({cn, caption, solid = true}: ButtonTypes) => {
 
     if (solid) {
         return (
-            <div className={`flex py-0 px-6 items-center gap-4 rounded-lg border border-[rgba(255,255,255,0.00)] bg-[#4284F4] w-fit h-[52px] overflow-hidden ${cn}`}>
+            <div className={`flex py-0 px-6 items-center gap-4 rounded-lg border border-[rgba(255,255,255,0.00)] bg-[#4284F4] w-fit h-[52px] overflow-hidden cursor-pointer ${cn}`}>
                 <p className="text-[#FFF] text-base font-medium w-fit">
                 {caption}
                 </p>
