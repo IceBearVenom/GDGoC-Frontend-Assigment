@@ -1,10 +1,10 @@
-import Introduction from "./Introduction";
-import Navigation from "./OverviewNav"
-import TrackOverview from "./TrackOverview";
-import Outcomes from "./Outcome";
-import ProgramFormat from "./Format";
-import LearningJourney from "./Journey";
-import StartingPoint from "./StartingPoint";
+import Introduction from "./sections/Introduction";
+import Navigation from "./sections/OverviewNav"
+import TrackOverview from "./sections/TrackOverview";
+import Outcomes from "./sections/Outcome";
+import ProgramFormat from "./sections/Format";
+import LearningJourney from "./sections/Journey";
+import StartingPoint from "./sections/StartingPoint";
 
 export default function ProgramsAndLearningTracks() {
   return (

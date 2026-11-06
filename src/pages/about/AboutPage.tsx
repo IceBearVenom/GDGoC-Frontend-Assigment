@@ -1,8 +1,8 @@
-import AboutIntroduction from "./AboutIntroduction";
-import OurPurpose from "./OurPurpose";
-import CommunityValues from "./CommunityValues";
-import WaysToBelong from "./WaysToBelong";
-import CommunityCommitment from "./CommunityCommitment";
+import AboutIntroduction from "./sections/AboutIntroduction";
+import OurPurpose from "./sections/OurPurpose";
+import CommunityValues from "./sections/CommunityValues";
+import WaysToBelong from "./sections/WaysToBelong";
+import CommunityCommitment from "./sections/CommunityCommitment";
 
 export default function AboutPage() {
   return (

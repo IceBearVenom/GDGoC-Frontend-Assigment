@@ -1,6 +1,6 @@
-import Button from "./Button";
-import HyperLink from "./HyperLink";
-import SectionLabel from "./SectionLabel";
+import Button from "../common/Button";
+import HyperLink from "../common/HyperLink";
+import SectionLabel from "../common/SectionLabel";
 
 export default function Cta() {
   return (

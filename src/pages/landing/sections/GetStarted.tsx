@@ -1,4 +1,4 @@
-import SectionLabel from "../../components/SectionLabel";
+import SectionLabel from "../../../components/common/SectionLabel";
 
 export default function GetStarted() {
   return (

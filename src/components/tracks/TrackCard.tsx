@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import type { TrackTypes } from "../types/types";
+import type { TrackTypes } from "../../types/types";
 import TrackPopUp from "./TrackPopUp";
 
 export function TrackCard({

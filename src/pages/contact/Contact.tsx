@@ -1,6 +1,6 @@
-import Introduction from "./Introduction";
-import Workspace from "./Workspace";
-import BeforeYouSend from "./BeforeYouSent";
+import Introduction from "./sections/Introduction";
+import Workspace from "./sections/Workspace";
+import BeforeYouSend from "./sections/BeforeYouSent";
 
 export default function Contact() {
   return (

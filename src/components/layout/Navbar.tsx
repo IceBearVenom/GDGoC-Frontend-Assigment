@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
-import Brand from "./Brand";
-import Button from "./Button";
+import Brand from "../common/Brand";
+import Button from "../common/Button";
 
-import { fetchData } from "../services/api";
-import type { ApiResponse, NavigationTypes } from "../types/types";
+import { fetchData } from "../../services/api";
+import type { ApiResponse, NavigationTypes } from "../../types/types";
 
 const cta =
   "h-[52px] items-center justify-center gap-4 rounded-lg bg-[#4284F4] px-6 font-googleSans text-base font-medium text-white transition-colors hover:bg-[#3B78E7]";

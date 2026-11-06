@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import SectionLabel from "../../components/SectionLabel";
-import type { ApiResponse, FormatsTypes } from "../../types/types";
-import { fetchData } from "../../services/api";
+import SectionLabel from "../../../components/common/SectionLabel";
+import type { ApiResponse, FormatsTypes } from "../../../types/types";
+import { fetchData } from "../../../services/api";
 
 function ProgramFormat({
   id,

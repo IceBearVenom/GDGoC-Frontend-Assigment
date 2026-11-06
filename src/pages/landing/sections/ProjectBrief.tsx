@@ -1,5 +1,5 @@
-import HyperLink from "../../components/HyperLink";
-import SectionLabel from "../../components/SectionLabel";
+import HyperLink from "../../../components/common/HyperLink";
+import SectionLabel from "../../../components/common/SectionLabel";
 
 export default function ProjectBrief() {
   return (

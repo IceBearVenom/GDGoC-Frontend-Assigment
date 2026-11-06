@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import HyperLink from "../../components/HyperLink";
-import SectionLabel from "../../components/SectionLabel";
-import { fetchData } from "../../services/api";
-import type { ApiResponse, FaqsTypes } from "../../types/types";
+import HyperLink from "../../../components/common/HyperLink";
+import SectionLabel from "../../../components/common/SectionLabel";
+import { fetchData } from "../../../services/api";
+import type { ApiResponse, FaqsTypes } from "../../../types/types";
 
 type FaqItemProps = {
   question: string;

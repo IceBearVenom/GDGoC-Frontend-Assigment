@@ -1,12 +1,12 @@
-import Hero from "./Hero";
-import ValueStrip from "./ValueStrip";
-import About from "./About";
-import Tracks from "./Tracks";
-import LearningFormats from "./LearningFormats";
-import ProjectBrief from "./ProjectBrief";
-import GetStarted from "./GetStarted";
-import InclusiveBanner from "./InclusiveBanner";
-import Faq from "./Faq";
+import Hero from "./sections/Hero";
+import ValueStrip from "./sections/ValueStrip";
+import About from "./sections/About";
+import Tracks from "./sections/Tracks";
+import LearningFormats from "./sections/LearningFormats";
+import ProjectBrief from "./sections/ProjectBrief";
+import GetStarted from "./sections/GetStarted";
+import InclusiveBanner from "./sections/InclusiveBanner";
+import Faq from "./sections/Faq";
 
 export default function LandingGdgocUgm() {
   return (

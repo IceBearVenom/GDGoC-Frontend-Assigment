@@ -1,5 +1,5 @@
-import type { TrackTypes } from "../types/types";
-import Button from "./Button";
+import type { TrackTypes } from "../../types/types";
+import Button from "../common/Button";
 
 interface TrackOverviewProps {
   track: TrackTypes;

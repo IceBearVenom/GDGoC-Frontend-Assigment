@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { fetchData } from "../../services/api";
-import type { ApiResponse, TrackTypes } from "../../types/types";
-import { TrackCard } from "../../components/TrackCard";
-import SectionLabel from "../../components/SectionLabel";
+import { fetchData } from "../../../services/api";
+import type { ApiResponse, TrackTypes } from "../../../types/types";
+import { TrackCard } from "../../../components/tracks/TrackCard";
+import SectionLabel from "../../../components/common/SectionLabel";
 
 export default function TrackOverview() {
 

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import type { ApiResponse, FormatsTypes } from "../../types/types";
-import { fetchData } from "../../services/api";
-import { formatTitle } from "../../utils/textFormat";
-import HyperLink from "../../components/HyperLink";
+import type { ApiResponse, FormatsTypes } from "../../../types/types";
+import { fetchData } from "../../../services/api";
+import { formatTitle } from "../../../utils/formatters";
+import HyperLink from "../../../components/common/HyperLink";
 
 function ProgramFormatCard({
     id,

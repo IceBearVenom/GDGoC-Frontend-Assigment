@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import type { ApiResponse, JourneyTypes } from "../../types/types";
-import { formatNumber } from "../../utils/textFormat";
-import { fetchData } from "../../services/api";
-import SectionLabel from "../../components/SectionLabel";
+import type { ApiResponse, JourneyTypes } from "../../../types/types";
+import { formatNumber } from "../../../utils/formatters";
+import { fetchData } from "../../../services/api";
+import SectionLabel from "../../../components/common/SectionLabel";
 
 function LearningJourneyMap({
     step,

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import { fetchData } from "../../services/api";
-import type { ApiResponse, InquiryCategoryTypes } from "../../types/types";
-import SectionLabel from "../../components/SectionLabel";
-import HyperLink from "../../components/HyperLink";
+import { fetchData } from "../../../services/api";
+import type { ApiResponse, InquiryCategoryTypes } from "../../../types/types";
+import SectionLabel from "../../../components/common/SectionLabel";
+import HyperLink from "../../../components/common/HyperLink";
 
 const controlClass =
   "w-full rounded-lg border border-[#DADCE0] bg-[#FFF] p-4 text-[#242424] font-googleSans text-base md:text-[15px] placeholder:text-[#5F6368] focus:outline-none focus:border-[#4284F4] focus:ring-2 focus:ring-[#4284F4]/20";

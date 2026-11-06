@@ -1,5 +1,5 @@
-import SectionLabel from "../../components/SectionLabel";
-import HyperLink from "../../components/HyperLink";
+import SectionLabel from "../../../components/common/SectionLabel";
+import HyperLink from "../../../components/common/HyperLink";
 
 export default function StartingPoint() {
   return (

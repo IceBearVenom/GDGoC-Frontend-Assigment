@@ -1,5 +1,5 @@
-import ScaleToFit from "../../components/ScaleToFit";
-import SectionLabel from "../../components/SectionLabel";
+import ScaleToFit from "../../../components/common/ScaleToFit";
+import SectionLabel from "../../../components/common/SectionLabel";
 
 export default function AboutIntroduction() {
   return (

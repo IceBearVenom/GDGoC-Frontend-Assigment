@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-import HyperLink from "../../components/HyperLink";
-import SectionLabel from "../../components/SectionLabel";
-import type { ApiResponse, TrackTypes } from "../../types/types";
-import { fetchData } from "../../services/api";
-import { TrackCard } from "../../components/TrackCard";
+import HyperLink from "../../../components/common/HyperLink";
+import SectionLabel from "../../../components/common/SectionLabel";
+import type { ApiResponse, TrackTypes } from "../../../types/types";
+import { fetchData } from "../../../services/api";
+import { TrackCard } from "../../../components/tracks/TrackCard";
 
 export default function Tracks() {
   const [tracks, setTracks] = useState<TrackTypes[]>([]);
@@ -36,7 +36,7 @@ export default function Tracks() {
             with others.
           </p>
         </div>
-        <HyperLink caption="See the overview" />
+        <HyperLink caption="See the overview" href="/overview"/>
       </div>
       <div className="flex flex-col lg:flex-row lg:items-stretch gap-6 w-full overflow-hidden">
         {tracks.map((track, index) => (

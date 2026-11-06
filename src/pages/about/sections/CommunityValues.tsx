@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import SectionLabel from "../../components/SectionLabel";
-import { fetchData } from "../../services/api";
-import type { ApiResponse, ValuesTypes } from "../../types/types";
+import SectionLabel from "../../../components/common/SectionLabel";
+import { fetchData } from "../../../services/api";
+import type { ApiResponse, ValuesTypes } from "../../../types/types";
 
 export default function CommunityValues() {
   const [values, setValues] = useState<ValuesTypes[]>([]);

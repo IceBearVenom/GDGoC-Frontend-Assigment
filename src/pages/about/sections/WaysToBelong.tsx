@@ -1,8 +1,8 @@
-import SectionLabel from "../../components/SectionLabel";
-import HyperLink from "../../components/HyperLink";
+import SectionLabel from "../../../components/common/SectionLabel";
+import HyperLink from "../../../components/common/HyperLink";
 import { useEffect, useState } from "react";
-import { fetchData } from "../../services/api";
-import type { ApiResponse, RolesTypes } from "../../types/types";
+import { fetchData } from "../../../services/api";
+import type { ApiResponse, RolesTypes } from "../../../types/types";
 
 export default function WaysToBelong() {
 

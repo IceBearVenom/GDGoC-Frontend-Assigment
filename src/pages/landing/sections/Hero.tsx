@@ -1,6 +1,6 @@
-import ScaleToFit from "../../components/ScaleToFit";
-import Button from "../../components/Button"
-import SectionLabel from "../../components/SectionLabel";
+import ScaleToFit from "../../../components/common/ScaleToFit";
+import Button from "../../../components/common/Button"
+import SectionLabel from "../../../components/common/SectionLabel";
 
 export default function Hero() {
   return (
