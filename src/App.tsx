@@ -1,4 +1,5 @@
-import { Routes, Route, Outlet } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, Outlet, useLocation, useNavigate } from "react-router-dom";
 
 import Navbar from "./components/layout/Navbar";
 import Cta from "./components/layout/Cta";
@@ -10,10 +11,25 @@ import Overview from "./pages/overview/Overview";
 import Contact from "./pages/contact/Contact";
 import NotFound from "./pages/notFound/NotFound";
 
+// No page uses query params yet, so remove any "?something=..." from the URL
+function CleanUrl() {
+  const { pathname, search, hash } = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (search) {
+      navigate({ pathname, hash }, { replace: true });
+    }
+  }, [pathname, search, hash, navigate]);
+
+  return null;
+}
+
 // Navbar + Footer on every page, including the 404
 function MainLayout() {
   return (
     <div className="min-h-screen bg-white text-[#292929]">
+      <CleanUrl />
       <Navbar />
 
       <main className="mt-12">

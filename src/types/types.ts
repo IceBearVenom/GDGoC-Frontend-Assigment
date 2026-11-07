@@ -12,7 +12,8 @@ export type Endpoints =
   | "/inquiry-categories"
   | "/faqs"
   | "/stats"
-  | "/navigation";
+  | "/navigation"
+  | "/contact";
 
 // ======= MAIN TYPES ========
 
