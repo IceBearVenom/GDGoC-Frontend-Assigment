@@ -4,6 +4,7 @@ import { fetchData } from "../../../services/api";
 import type { ApiResponse, InquiryCategoryTypes } from "../../../types/types";
 import SectionLabel from "../../../components/common/SectionLabel";
 import HyperLink from "../../../components/common/HyperLink";
+import Toast from "../../../components/common/Toast";
 
 const controlClass =
   "w-full rounded-lg border border-[#DADCE0] bg-[#FFF] p-4 text-[#242424] font-googleSans text-base md:text-[15px] placeholder:text-[#5F6368] focus:outline-none focus:border-[#4284F4] focus:ring-2 focus:ring-[#4284F4]/20";
@@ -69,7 +70,7 @@ export default function Workspace() {
   const [categories, setCategories] = useState<InquiryCategoryTypes[]>([]);
   const [selectedId, setSelectedId] = useState<string>("");
   const [form, setForm] = useState(initialForm);
-  const [submitted, setSubmitted] = useState(false);
+  const [toastOpen, setToastOpen] = useState(false);
 
   useEffect(() => {
     const getCategories = async () => {
@@ -92,14 +93,16 @@ export default function Workspace() {
   ) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
-    setSubmitted(false);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log({ ...form, categoryId: selectedId }); // no API yet
-    setSubmitted(true);
-    // setForm(initialForm); // uncomment to clear the form after submit
+
+    // Empty every field, including the checkbox, and go back to the first category
+    setForm(initialForm);
+    setSelectedId(categories[0]?.id ?? "");
+    setToastOpen(true);
   };
 
   return (
@@ -134,7 +137,11 @@ export default function Workspace() {
             Follow @gdgoc.ugm for learning opportunities and what’s happening in the community.
           </p>
           <div className="flex items-center gap-3 w-fit overflow-hidden">
-            <HyperLink caption="Find @gdgoc.ugm" href="https://www.instagram.com/gdgoc.ugm/" newTab/>
+            <HyperLink
+              caption="Find @gdgoc.ugm"
+              href="https://www.instagram.com/gdgoc.ugm/"
+              newTab
+            />
           </div>
         </div>
       </div>
@@ -279,13 +286,13 @@ export default function Workspace() {
             Please don’t include passwords or sensitive personal information.
           </p>
         </div>
-
-        {submitted && (
-          <p role="status" className="text-[#34A853] font-googleSans text-sm">
-            Thanks! Your message is ready to send (not connected to an API yet).
-          </p>
-        )}
       </form>
+
+      <Toast
+        open={toastOpen}
+        message="Message sent! Thanks for reaching out. We'll get back to you soon."
+        onClose={() => setToastOpen(false)}
+      />
     </div>
   );
 }
